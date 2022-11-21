@@ -81,7 +81,7 @@ const Pin = ({ pin }) => {
                             </div>
                             {alreadySaved?.length !== 0 ? (
                                 <button type="button" className="bg-red-500 opacity-70 hover:opacity-100 text-white font-bold px-5 py-1 text-base rounded-3xl hover:shadow-md outline-none">
-                                    {pin?.save?.length}  Saved
+                                    {pin?.save?.length} Simpan
                                 </button>
                             ) : (
                                 <button
@@ -92,7 +92,7 @@ const Pin = ({ pin }) => {
                                     type="button"
                                     className="bg-red-500 opacity-70 hover:opacity-100 text-white font-bold px-5 py-1 text-base rounded-3xl hover:shadow-md outline-none"
                                 >
-                                    {pin?.save?.length}   {savingPost ? 'Saving' : 'Save'}
+                                    {pin?.save?.length}   {savingPost ? 'Menyimpan' : 'Simpan'}
                                 </button>
                             )}
                         </div>
@@ -127,13 +127,13 @@ const Pin = ({ pin }) => {
                     </div>
                 )}
             </div>
-            <Link to={`/user-profile/${postedBy?._id}`} className="flex gap-2 mt-2 items-center">
+            <Link to={`/user-profile/${postedBy?._id}`} className="flex gap-2 mt-2 items-center ">
                 <img
-                    className="w-8 h-8 rounded-full object-cover"
+                    className="w-8 h-8 rounded-full object-cover "
                     src={postedBy?.image}
-                    alt="user-profile"
+                    alt="profil-user"
                 />
-                <p className="font-semibold capitalize">{postedBy?.userName}</p>
+                <p className="font-semibold capitalize ">{postedBy?.userName}</p>
             </Link>
         </div>
     );

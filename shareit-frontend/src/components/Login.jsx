@@ -14,13 +14,13 @@ import { useEffect } from "react"
 
 const Login = () => {
 
-    const clientId =
-        "730707715563-cbrc4k282eols86t45jed50j1fojd1a4.apps.googleusercontent.com ";
+    // const clientId =
+    //     "730707715563-cbrc4k282eols86t45jed50j1fojd1a4.apps.googleusercontent.com ";
 
     useEffect(() => {
         const initClient = () => {
             gapi.client.init({
-                clientId: clientId,
+                clientId: process.env.REACT_APP_GOOGLE_API_TOKEN,
                 scope: "",
             });
         };

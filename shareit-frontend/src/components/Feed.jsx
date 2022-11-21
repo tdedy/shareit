@@ -28,10 +28,10 @@ const Feed = () => {
             });
         }
     }, [categoryId]);
-    const ideaName = categoryId || 'new';
+    const ideaName = categoryId || 'baru';
     if (loading) {
         return (
-            <Spinner message={`We are adding ${ideaName} ideas to your feed!`} />
+            <Spinner message={`Sedang memuat ide ${ideaName} ke feed anda!`} />
         );
     }
     return (

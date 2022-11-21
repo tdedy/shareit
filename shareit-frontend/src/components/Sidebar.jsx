@@ -33,7 +33,7 @@ const Sidebar = ({ closeToggle, user }) => {
                         <RiHomeFill />
                         Home
                     </NavLink>
-                    <h3 className="mt-2 px-5 text-base 2xl:text-xl"> Kategori</h3>
+                    <h3 className="mt-2 px-5 text-base 2xl:text-xl underline ">cek kategori</h3>
                     {categories.slice(0, categories.length - 1).map((category) => (
                         <NavLink
                             to={`/kategori/${category.name}`}
@@ -50,11 +50,11 @@ const Sidebar = ({ closeToggle, user }) => {
             {user && (
                 <Link
                     to={`user-profile/${user._id}`}
-                    className="flex my-5 mb-3 gap-2 p-2 items-center bg-black text-white rounded-lg shadow-lg mx-3"
+                    className="flex my-5 mb-3 gap-2 p-2 items-center bg-stone-800 text-white rounded-lg shadow-lg mx-3"
                     onClick={handleCloseSidebar}
                 >
-                    <img src={user.image} className="w-10 h-10 rounded-full" alt="user-profile" />
-                    <p>{user.userName}</p>
+                    <img src={user.image} className="w-10 h-10 rounded-full" alt="profil-user" />
+                    <p className='font-semibold'>{user.userName}</p>
                     <IoIosArrowForward />
                 </Link>
             )}
